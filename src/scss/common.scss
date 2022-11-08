@@ -1,0 +1,56 @@
+// Заголовки, общие БЄМ блоки и проче...
+.btn {
+	border-radius: 4px;
+	font-weight: 600;
+	background-color: $btnColor;
+	text-align: center;
+}
+.btn-link {
+	border-radius: 4px;
+	font-weight: 700;
+	background-color: $btnColor;
+	width: 175px;
+	height: 53px;
+	padding: 15px 33px;
+	line-height: 24px;
+	color: #fff;
+	text-align: center;
+}
+.h1-title {
+	font-weight: 700;
+	font-size: 40px;
+	line-height: 60px;
+	color: $mainColor;
+}
+
+.h2-title {
+	font-weight: 700;
+	font-size: 32px;
+	line-height: 48px;
+	color: $mainColor;
+}
+.span-text {
+	line-height: 24px;
+	font-weight: 600;
+}
+.content-block {
+	line-height: 26px;
+	span {
+		display: inline-block;
+		margin-bottom: 8px;
+		font-weight: 600;
+		line-height: 24px;
+	}
+	h2 {
+		margin-bottom: 23px;
+	}
+	p {
+		&:not(:last-child) {
+			padding-bottom: 30px;
+		}
+	}
+	h6 {
+		margin-bottom: 12px;
+		font-weight: 600;
+	}
+}

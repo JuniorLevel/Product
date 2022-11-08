@@ -1,0 +1,56 @@
+.management {
+	padding-top: 150px;
+
+		// .management__container
+
+		&__container {
+		}
+
+		// .management__inner
+
+		&__inner {
+		
+		}
+}
+.inner-management {
+		display: flex;
+		justify-content: space-between;
+		
+		// .inner-management__content
+
+		&__content {
+			margin-top: 19px;
+			flex: 0 0 486px;
+		}
+
+		// .inner-management__span-text
+
+		&__span-text {
+			
+		}
+
+		// .inner-management__title
+
+		&__title {
+		}
+
+		// .inner-management__text
+
+		&__text {
+		}
+
+		// .inner-management__sub-title
+
+		&__sub-title {
+		}
+
+		// .inner-management__image-ibg
+
+		&__image-ibg {
+			// .inner-management__image-ibg_contain
+
+			&_contain {
+			}
+		}
+}
+
