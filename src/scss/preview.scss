@@ -26,6 +26,7 @@
 	// .inner-preview__title
 
 	&__title {
+		@extend %h1-title;
 		margin-bottom: 29px;
 		@include adaptiveValue("font-size", 40, 36);
 	}
@@ -51,6 +52,7 @@
 	//.inner-preview__link-btn
 
 	&__link-btn {
+		@extend %btn-link;
 	}
 
 	// .inner-preview__link

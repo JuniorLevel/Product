@@ -38,6 +38,7 @@
 	// .inner-collaborative__title
 
 	&__title {
+		@extend %h2-title;
 	}
 
 	// .inner-collaborative__text

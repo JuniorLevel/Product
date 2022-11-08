@@ -13,6 +13,7 @@
 	// .product-values__title
 
 	&__title {
+		@extend %h2-title;
 		margin-bottom: 79px;
 	}
 
@@ -25,6 +26,7 @@
 	// .product-values__btn
 
 	&__btn {
+		@extend %btn-link;
 		display: inline-block;
 		margin-bottom: 90px;
 	}

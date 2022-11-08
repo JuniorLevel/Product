@@ -39,6 +39,7 @@
 	// .inner-support__title
 
 	&__title {
+		@extend %h2-title;
 	}
 
 	// .inner-support__text

@@ -32,6 +32,7 @@
 		// .inner-management__title
 
 		&__title {
+			@extend %h2-title;
 		}
 
 		// .inner-management__text
