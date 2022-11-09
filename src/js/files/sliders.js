@@ -7,7 +7,7 @@
 // Подключаем слайдер Swiper из node_modules
 // При необходимости подключаем дополнительные модули слайдера, указывая их в {} через запятую
 // Пример: { Navigation, Autoplay }
-import Swiper, { Navigation } from 'swiper';
+import Swiper, { Navigation, Pagination, Autoplay } from 'swiper';
 /*
 Основниые модули слайдера:
 Navigation, Pagination, Autoplay, 
@@ -17,9 +17,9 @@ EffectFade, Lazy, Manipulation
 
 // Стили Swiper
 // Базовые стили
-import "../../scss/base/swiper.scss";
+// import "../../scss/base/swiper.scss";
 // Полный набор стилей из scss/libs/swiper.scss
-// import "../../scss/libs/swiper.scss";
+import "../../scss/libs/swiper.scss";
 // Полный набор стилей из node_modules
 // import 'swiper/css';
 
@@ -32,13 +32,16 @@ function initSliders() {
 		new Swiper('.swiper', { // Указываем скласс нужного слайдера
 			// Подключаем модули слайдера
 			// для конкретного случая
-			modules: [Navigation],
-			observer: true,
-			observeParents: true,
-			slidesPerView: 1,
-			spaceBetween: 0,
-			autoHeight: true,
+			modules: [Pagination, Autoplay],
+			// observer: true,
+			// observeParents: true,
+			slidesPerView: 3,
+			spaceBetween: 32,
+			// autoHeight: true,
 			speed: 800,
+			autoplay: {
+				delay: 1500,
+			 },
 
 			//touchRatio: 0,
 			//simulateTouch: false,
@@ -56,12 +59,12 @@ function initSliders() {
 			*/
 
 			// Пагинация
-			/*
+			
 			pagination: {
 				el: '.swiper-pagination',
 				clickable: true,
 			},
-			*/
+			
 
 			// Скроллбар
 			/*
@@ -72,10 +75,10 @@ function initSliders() {
 			*/
 
 			// Кнопки "влево/вправо"
-			navigation: {
-				prevEl: '.swiper-button-prev',
-				nextEl: '.swiper-button-next',
-			},
+			// navigation: {
+			// 	prevEl: '.swiper-button-prev',
+			// 	nextEl: '.swiper-button-next',
+			// },
 
 			// Брейкпоинты
 			/*
@@ -101,7 +104,15 @@ function initSliders() {
 			*/
 			// События
 			on: {
-
+				init() {
+					this.el.addEventListener('mouseenter', () => {
+					  this.autoplay.stop();
+					});
+			
+					this.el.addEventListener('mouseleave', () => {
+					  this.autoplay.start();
+					});
+				 }
 			}
 		});
 	}
