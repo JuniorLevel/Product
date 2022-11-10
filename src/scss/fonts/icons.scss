@@ -11,7 +11,8 @@
 [class*="_icon-"] {
 	&:before {
 		@extend %ic;
-		display: inline-block;
+		position: absolute;
+		// display: inline-block;
 	}
 }
 
@@ -29,6 +30,9 @@
  }
  ._icon-dollar:before {
 	content: "\e904";
+	top: 25px;
+	font-size: 29px;
+	color: #02897A;
  }
  ._icon-facebook:before {
 	content: "\e905";
