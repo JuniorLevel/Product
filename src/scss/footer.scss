@@ -1,3 +1,165 @@
-//====================================================================================================
+.footer {
+	padding-bottom: 48px;
+	// .footer__container
 
-//====================================================================================================
+	&__container {
+	}
+
+	// .footer__body
+
+	&__body {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	// .footer__copyRight
+
+	&__copyRight {
+		text-align: center;
+	}
+
+	// .footer__copyRightText
+
+	&__copyRightText {
+		line-height: 30px;
+	}
+}
+.body-footer {
+	margin-bottom: 16px;
+	// .body-footer__social
+
+	&__social {
+		
+	}
+
+	// .body-footer__social-logo
+
+	&__social-logo {
+	}
+
+	// .body-footer__icons
+
+	&__icons {
+	}
+}
+.logo {
+	&__link {
+		
+	}
+}
+.icons-footer {
+	margin-top: 25px;
+	// .icons-footer__item
+
+	&__item {
+
+	}
+}
+
+.body-footer {
+	
+	// .body-footer__logo
+
+	&__logo {
+		margin-bottom: 25px;
+	}
+
+	// .body-footer__icons
+
+	&__icons {
+	}
+
+	// .body-footer__content
+
+	&__content {
+	}
+}
+.icons-footer {
+	display: flex;
+	gap: 16px;
+	color: #02897A;
+	// .icons-footer__item
+
+	&__item {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 40px;
+		height: 40px;
+		background-color: #EDFFFC;
+		border-radius: 50%;
+	}
+}
+
+.content-footer {
+	display: flex;
+	gap: 120px;
+	// .content-footer__column
+
+	&__column {
+	}
+
+	// .content-footer__column-title
+
+	&__column-title {
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 30px;
+		margin-bottom: 8px;
+	}
+
+	// .content-footer__column-list
+
+	&__column-list {
+	}
+
+	// .content-footer__column-item
+
+	&__column-item {
+		line-height: 35px;
+	}
+
+	// .content-footer__item-link
+
+	&__item-link {
+	}
+
+	// .content-footer__column-text
+
+	&__column-text {
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 30px;
+		margin-bottom: 34px;
+	}
+
+	// .content-footer__column-form
+
+	&__column-form {
+	}
+}
+.form-footer {
+
+	// .form-footer__input
+
+	&__input {
+		padding: 0 15px 0 15px;
+		border: 1px solid #BCD0E5;
+		border-radius: 4px;
+		height: 48px;
+		width: 100%;
+		margin-bottom: 21px;
+		&::placeholder {
+			font-weight: 500;
+		}
+	}
+
+	// .form-footer__button
+
+	&__button {
+		@extend %btn-link;
+		width: 131px;
+		height: 39px;
+		padding: 8px 15px;
+	}
+}
