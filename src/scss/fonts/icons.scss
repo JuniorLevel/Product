@@ -11,7 +11,7 @@
 [class*="_icon-"] {
 	&:before {
 		@extend %ic;
-		position: absolute;
+		// position: absolute;
 		// display: inline-block;
 	}
 }
@@ -30,6 +30,7 @@
  }
  ._icon-dollar:before {
 	content: "\e904";
+	position: absolute;
 	top: 25px;
 	font-size: 29px;
 	color: #02897A;
