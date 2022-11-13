@@ -1,5 +1,5 @@
 .clients {
-	margin-bottom: 150px;
+	@include adaptiveValue("margin-bottom", 150, 100);
 	// .clients__container
 
 	&__container {
@@ -34,7 +34,7 @@
 }
 .feedback-clients {
 	display: flex;
-	gap: 64px;
+	@include adaptiveValue("gap", 64, 15, 1920, 320);
 	// .feedback-clients__item
 
 	&__item {
@@ -42,6 +42,10 @@
 		border: 1px solid #DEDEDE;
 		border-radius: 5px;
 		flex: 0 1 33.333%;
+		@media (max-width: 650px){
+			// flex-direction: column;
+			flex: 0 1 125px;
+		}
 	}
 
 	// .feedback-clients__rate
@@ -61,6 +65,10 @@
 	// .feedback-clients__info
 
 	&__info {
+	}
+
+	@media (max-width: 650px){
+		flex-direction: column;
 	}
 }
 .info-feedback {

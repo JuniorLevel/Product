@@ -1,6 +1,7 @@
 .management {
 	// padding-top: 150px;
-	margin-bottom: 150px;
+	@include adaptiveValue("margin-bottom", 150, 100);
+	// margin-bottom: 150px;
 
 		// .management__container
 
@@ -15,13 +16,20 @@
 }
 .inner-management {
 		display: flex;
-		justify-content: space-between;
+		align-items: center;
+		@include adaptiveValue("gap", 86, 40);
+		@media (max-width: 925px){
+			flex-wrap: wrap;
+			justify-content: center;
+		}
 		
 		// .inner-management__content
 
 		&__content {
-			margin-top: 19px;
-			flex: 0 0 486px;
+			flex: 0 1 486px;
+			@media (max-width: 925px){
+				order: 2;
+			}
 		}
 
 		// .inner-management__span-text
@@ -39,6 +47,7 @@
 		// .inner-management__text
 
 		&__text {
+			
 		}
 
 		// .inner-management__sub-title
@@ -52,6 +61,9 @@
 			// .inner-management__image-ibg_contain
 
 			&_contain {
+				@media (max-width: 925px){
+					margin-bottom: 50px;
+				}
 			}
 		}
 }

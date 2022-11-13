@@ -1,6 +1,7 @@
 .collaborative {
 	// padding-top: 150px;
-	margin-bottom: 150px;
+	// margin-bottom: 150px;
+	@include adaptiveValue("margin-bottom", 150, 70);
 	// .collaborative__container
 
 	&__container {
@@ -13,7 +14,12 @@
 }
 .inner-collaborative {
 	display: flex;
-	justify-content: space-between;
+	align-items: center;
+	@include adaptiveValue("gap", 86, 40);
+	@media (max-width: 925px){
+		flex-wrap: wrap;
+		justify-content: center;
+	}
 	// .inner-collaborative__image-ibg
 
 	&__image-ibg {
@@ -27,8 +33,11 @@
 	// .inner-collaborative__content
 
 	&__content {
-		margin-top: 19px;
-		flex: 0 0 486px;
+		// margin-top: 19px;
+		flex: 0 1 486px;
+		@media (max-width: 925px){
+			order: 2;
+		}
 	}
 
 	// .inner-collaborative__span-text

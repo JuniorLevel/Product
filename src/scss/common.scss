@@ -26,7 +26,8 @@
 
 %h2-title {
 	font-weight: 700;
-	font-size: 32px;
+	@include adaptiveValue("font-size", 32, 28);
+	// font-size: 32px;
 	line-height: 48px;
 	color: $mainColor;
 }
@@ -47,11 +48,13 @@
 		line-height: 24px;
 	}
 	h2 {
-		margin-bottom: 23px;
+		@include adaptiveValue("margin-bottom", 23, 16);
+		// margin-bottom: 23px;
 	}
 	p {
 		&:not(:last-child) {
-			padding-bottom: 30px;
+			@include adaptiveValue("padding-bottom", 30, 16);
+			// padding-bottom: 30px;
 		}
 	}
 	h6 {

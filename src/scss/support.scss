@@ -1,6 +1,7 @@
 .support {
 	// padding-top: 150px;
-	margin-bottom: 150px;
+	@include adaptiveValue("margin-bottom", 150, 100);
+	// margin-bottom: 150px;
 	// .support__container
 
 	&__container {
@@ -13,7 +14,13 @@
 }
 .inner-support {
 	display: flex;
-	justify-content: space-between;
+	align-items: center;
+	@include adaptiveValue("gap", 86, 40);
+	// justify-content: space-between;
+	@media (max-width: 925px){
+		flex-wrap: wrap;
+		justify-content: center;
+	}
 	// .inner-support__image-ibg
 
 	&__image-ibg {
@@ -27,8 +34,7 @@
 	// .inner-support__content
 
 	&__content {
-		margin-top: 36px;
-		flex: 0 0 486px;
+		flex: 0 1 486px;
 	}
 
 	// .inner-support__span-text
