@@ -1,5 +1,46 @@
 //====================================================================================================
 .header {
+	.logo__img-2 {
+		display: none;
+	}
+	// position: absolute;
+	&._header-scroll {
+		.logo__img-1 {
+			display: none;
+		}
+		.logo__img-2 {
+			display: block;
+		}
+		transition: top 2s ease 0s;
+		position: fixed;
+		top: 0;
+		// background-color: rgba($color: #000, $alpha: 0.9);
+		background-color: rgba($color: $mainColor, $alpha: 1);
+		color: #fff;
+		width: 100%;
+		z-index: 15;
+		.icon-menu {
+			span,
+			&::before,
+			&::after {
+				background-color: #fff;
+			}
+		}
+		.menu-header__link {
+			&:hover {
+				font-weight: 600;
+				color: green;
+			}
+		}
+	}
+	&._header-show {
+		transition: top 3s ease 0s;
+		top: -200%;
+	}
+
+
+
+
 	margin-bottom: 25px;
 	// .header__container
 	&__container {
@@ -141,25 +182,12 @@
 			left: -100%;
 			width: 100%;
 			height: 100%;
-			background-color: rgba(0,0,0,0.9);
+			background-color: rgba($color: $mainColor, $alpha: 1);
 			color: #fff;
 			padding: 100px 30px 30px 30px;
 			transition: left 0.6s ease 0s;
 			overflow: auto;
 			text-align: center;
-			
-			//липкий хедер
-
-			// &::before {
-			// 	content: '';
-			// 	position: fixed;
-			// 	top: 0;
-			// 	left: 0;
-			// 	width: 100%;
-			// 	height: 80px;
-			// 	background-color: rgb(201, 12, 12);
-			// 	z-index: 5;
-			// }
 		}
 
 		// .menu__list
@@ -199,7 +227,13 @@ html.menu-open {
 			background-color: grey;
 		}
 	}
+	header._header-show {
+		transition: top 5s ease 0s;
+		top: 0;
+	}
 }
+
+
 //====================================================================================================
 
 //Burger
