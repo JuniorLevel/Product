@@ -61,17 +61,25 @@
 	&__img {
 		border-top-left-radius: 8px;
 		border-top-right-radius: 8px;
+		&-ibg {
+			height: 230px;
+		}
 	}
+
+	// .slider-strategies__link
+
+	
 
 	// .slider-strategies__picture
 
 	&__picture {
+		border-radius: 8px 8px 0px 0px;
 	}
 
 	// .slider-strategies__content
 
 	&__content {
-		padding: 24px 39px 35px 24px;
+		padding: 24px 24px 35px 24px;
 	}
 
 	// .slider-strategies__author
